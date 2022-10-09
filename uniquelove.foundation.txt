@@ -1,0 +1,63 @@
+;;
+;; Domain:     uniquelove.foundation.
+;; Exported:   2022-10-09 13:40:47
+;;
+;; This file is intended for use for informational and archival
+;; purposes ONLY and MUST be edited before use on a production
+;; DNS server.  In particular, you must:
+;;   -- update the SOA record with the correct authoritative name server
+;;   -- update the SOA record with the contact e-mail address information
+;;   -- update the NS record(s) with the authoritative name servers for this domain.
+;;
+;; For further information, please consult the BIND documentation
+;; located on the following website:
+;;
+;; http://www.isc.org/
+;;
+;; And RFC 1035:
+;;
+;; http://www.ietf.org/rfc/rfc1035.txt
+;;
+;; Please note that we do NOT offer technical support for any use
+;; of this zone data, the BIND name server, or any other third-party
+;; DNS software.
+;;
+;; Use at your own risk.
+;; SOA Record
+uniquelove.foundation	3600	IN	SOA	uniquelove.foundation root.uniquelove.foundation 2041698944 7200 3600 86400 3600
+
+;; A Records
+autoconfig.uniquelove.foundation.	1	IN	A	199.188.201.205
+autodiscover.uniquelove.foundation.	1	IN	A	199.188.201.205
+cpanel.uniquelove.foundation.	1	IN	A	199.188.201.205
+cpcalendars.uniquelove.foundation.	1	IN	A	199.188.201.205
+cpcontacts.uniquelove.foundation.	1	IN	A	199.188.201.205
+ftp.uniquelove.foundation.	1	IN	A	199.188.201.207
+mail.uniquelove.foundation.	1	IN	A	199.188.201.205
+ns1.uniquelove.foundation.	1	IN	A	199.188.201.205
+ns2.uniquelove.foundation.	1	IN	A	199.188.201.205
+uniquelove.foundation.	1	IN	A	199.188.201.205
+webdisk.uniquelove.foundation.	1	IN	A	199.188.201.205
+webmail.uniquelove.foundation.	1	IN	A	199.188.201.205
+whm.uniquelove.foundation.	1	IN	A	199.188.201.205
+
+;; CNAME Records
+www.uniquelove.foundation.	1	IN	CNAME	uniquelove.foundation.
+
+;; MX Records
+uniquelove.foundation.	1	IN	MX	0 mail.uniquelove.foundation.
+
+;; SRV Records
+_autodiscover._tcp.uniquelove.foundation.	1	IN	SRV	0 0 443 cpanelemaildiscovery.cpanel.net.
+_caldavs._tcp.uniquelove.foundation.	1	IN	SRV	0 0 2080 business56.web-hosting.com.
+_caldav._tcp.uniquelove.foundation.	1	IN	SRV	0 0 2079 business56.web-hosting.com.
+_carddavs._tcp.uniquelove.foundation.	1	IN	SRV	0 0 2080 business56.web-hosting.com.
+_carddav._tcp.uniquelove.foundation.	1	IN	SRV	0 0 2079 business56.web-hosting.com.
+
+;; TXT Records
+_caldavs._tcp.uniquelove.foundation.	1	IN	TXT	"path=/"
+_caldav._tcp.uniquelove.foundation.	1	IN	TXT	"path=/"
+_carddavs._tcp.uniquelove.foundation.	1	IN	TXT	"path=/"
+_carddav._tcp.uniquelove.foundation.	1	IN	TXT	"path=/"
+default._domainkey.uniquelove.foundation.	1	IN	TXT	"v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxQ2gy/xJ7f5G+nixppnfyvys/LYso6ZrVO5QepjpvWqJ32kYTnhxtDXluMt6WGQZdr5qZ8m68SyOWFjPkPo4EuApibzEx4cEmK2HjSJoDMaNRt9C8JRxj2zb0tSjJlofGm1pev10TqeFKKiWbljhEDvexCRiEi9cJAfSPzksx/Rn8BGNBPrh9mTI6td9VewyU rMJvE0hebxRFkK+3xDBR2HiLu4tbick+61ArRNN/Ey+i5+EeWOSGIkpNiHXsAmhdIs/Tw0tJu/VPOtr23cKj1O9XoVQrsbZGYA6nodLCgXik/Qz7sWrM3BEohhdlHWq9VIsU1hBIyxmh1qSmBngswIDAQAB;"
+uniquelove.foundation.	1	IN	TXT	"v=spf1 ip4:199.188.201.153 ip4:199.188.201.205 include:spf.web-hosting.com +a +mx +ip4:162.0.235.8 +ip4:162.0.235.9 ~all"
